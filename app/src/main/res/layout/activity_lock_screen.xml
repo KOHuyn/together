@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="lockScreenViewModel"
+            type="com.kohuyn.together.ui.lockscreen.LockScreenViewModel" />
+    </data>
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@drawable/bg">
+       <androidx.appcompat.widget.AppCompatImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/couple_lock"
+           android:layout_alignParentBottom="true"
+           android:layout_centerHorizontal="true"/>
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/str_enter_pin_code"
+    style="@style/TextAppearance.Text.PhotoShoot"
+    android:layout_marginTop="@dimen/_80sdp"
+    android:textSize="30sp"
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/clr_white" />
+   </RelativeLayout>
+
+</layout>

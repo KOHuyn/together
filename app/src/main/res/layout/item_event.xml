@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginEnd="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    app:cardBackgroundColor="@color/clr_white"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_3sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_name_event"
+            style="@style/TextAppearance.Text.Bold"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Valentine Day"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/clr_black"
+            />
+        <LinearLayout
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_date_event"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:text="14/2/2020"
+                android:textColor="@color/clr_date_dark"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:gravity="end"
+                android:id="@+id/txt_count_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="in 1 day"
+                android:textColor="@color/clr_hint"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

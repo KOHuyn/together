@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="addStoryViewModel"
+            type="com.kohuyn.together.ui.memories.addstory.AddStoryViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/couple_setting" />
+
+        <LinearLayout
+            android:id="@+id/ln_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:onClick="@{()->addStoryViewModel.back()}"
+                android:padding="@dimen/_20sdp"
+                android:src="@drawable/ic_back" />
+            <LinearLayout
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_story"
+                    android:textColor="@color/clr_white"
+                    android:textSize="30sp" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textColor="@color/clr_date"
+                    tools:text="3/3/2020"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:onClick="@{()->addStoryViewModel.openCalendar()}"
+                    android:drawableStart="@drawable/ic_calendar"
+                    />
+            </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@drawable/bg_input_text">
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edt_add_story"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_100sdp"
+                        android:background="@null"
+                        android:gravity="start"
+                        android:lines="6"
+                        android:hint="@string/str_input_content"
+                        android:padding="@dimen/_5sdp"
+                        android:textColor="@color/clr_text"
+                        android:textColorHint="@color/clr_hint"
+                        android:textCursorDrawable="@null"
+                        android:textSize="13sp" />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_preview"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            app:cardCornerRadius="@dimen/_3sdp"
+                            android:visibility="gone"
+                            android:onClick="@{()->addStoryViewModel.imgPreview()}">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/img_preview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"/>
+                            <ImageView
+                                android:id="@+id/img_cancel"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:background="@drawable/bg_btn_save"
+                                android:layout_margin="@dimen/_2sdp"
+                                android:layout_gravity="end|top"
+                                android:padding="@dimen/_5sdp"
+                                android:src="@drawable/ic_cancel"
+                                android:onClick="@{()->addStoryViewModel.cancelImg()}"
+                                />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:background="@drawable/bg_camera"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{()->addStoryViewModel.pickImage()}"
+                            android:src="@drawable/camera" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/bg_btn_save"
+                android:text="@string/str_save"
+                android:textColor="@color/clr_text_red"
+                android:textSize="20sp"
+                android:onClick="@{()->addStoryViewModel.save()}"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

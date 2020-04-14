@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="settingViewModel"
+            type="com.kohuyn.together.ui.setting.SettingViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/bg">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/couple_setting"
+            android:layout_alignParentBottom="true" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_back"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:onClick="@{()->settingViewModel.back()}"
+            android:padding="@dimen/_20sdp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/str_setting"
+            android:textColor="@color/clr_white"
+            android:textSize="30sp" />
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/_15sdp"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          android:orientation="horizontal">
+          <androidx.appcompat.widget.AppCompatTextView
+              android:layout_weight="1"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:text="@string/str_lock_screen"
+              android:textColor="@color/clr_white"
+              android:textSize="18sp"/>
+          <androidx.appcompat.widget.SwitchCompat
+              android:id="@+id/sw_lock_screen"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+      </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/clr_white"
+                android:text="@string/str_show_notification"
+                android:textSize="18sp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_show_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_set_password"
+            style="@style/TextSetting"
+            android:text="@string/str_set_password"
+            android:onClick="@{()->settingViewModel.setPassword()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_change_picture_boy"
+            style="@style/TextSetting"
+            android:text="@string/str_change_picture_boy"
+            android:onClick="@{()->settingViewModel.changePictureBoy()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_change_picture_girl"
+            style="@style/TextSetting"
+            android:text="@string/str_change_picture_girl"
+            android:onClick="@{()->settingViewModel.changePictureGirl()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_change_background"
+            style="@style/TextSetting"
+            android:text="@string/str_change_background"
+            android:onClick="@{()->settingViewModel.changeBackground()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_change_day_start"
+            style="@style/TextSetting"
+            android:text="@string/str_change_day_start"
+            android:onClick="@{()->settingViewModel.changeDayStart()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:text="@string/str_more"
+            android:textColor="@color/clr_white"
+            android:textSize="30sp" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_rate_app"
+            style="@style/TextSetting"
+            android:text="@string/str_rate_app"
+            android:onClick="@{()->settingViewModel.rateApp()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_share_app"
+            style="@style/TextSetting"
+            android:text="@string/str_share_app"
+            android:onClick="@{()->settingViewModel.shareApp()}" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_feedback"
+            style="@style/TextSetting"
+            android:text="@string/str_feedback"
+            android:onClick="@{()->settingViewModel.feedback()}" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="clr_bg_input_text">#E4ECFF</color>
+
+    <color name="clr_text">#464646</color>
+    <color name="clr_white">#ffffff</color>
+    <color name="clr_transparent">#00ffffff</color>
+    <color name="clr_black">#000000</color>
+    <color name="clr_date">#E1E1E1</color>
+    <color name="clr_hint">#A1A1A1</color>
+    <color name="clr_text_red">#EC5671</color>
+    <color name="clr_text_gray">#7E8EAA</color>
+
+    <color name="clr_date_dark">#5E5E5E</color>
+
+</resources>
